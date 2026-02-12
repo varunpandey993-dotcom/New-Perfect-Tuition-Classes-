@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>N.P.T.C New Perfect Tuition Classes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap'); /* Added for the new heading font */
+
+        body {
+            background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+            font-family: 'Roboto', sans-serif;
+            color: #2b2b7a;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+
+        header {
+            padding: 20px 20px 10px; /* Reduced top padding from 40px to 20px to reduce empty space */
+            background: linear-gradient(135deg, #4a90e2 0%, #9b59b6 100%); /* Blue to purple gradient */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border: 6px solid #ffcc00; /* Yellow border on all sides */
+            margin-bottom: 35px;
+            color: #fff; /* White text for contrast */
+        }
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            margin: 0;
+            margin-left: -0.40cm; /* Shifted further towards the left by an additional 0.05 cm */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .logo-text .c-padding {
+            padding: 0 8px; /* Added padding around the C to prevent it from touching the border */
+        }
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .highlight-box {
+            border: 4px solid #d42a2a;
+            border-radius: 12px;
+            width: 320px;
+            margin: 20px auto;
+            padding: 15px 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #212183;
+            box-shadow: 0 8px 15px rgba(213, 42, 42, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            user-select: none;
+        }
+        .highlight-box:first-of-type { /* TUITION */
+            background: linear-gradient(135deg, #27ae60 0%, #16a085 100%); /* Green to teal gradient */
+            color: #fff; /* White text */
+        }
+        .highlight-box:nth-of-type(2) { /* Admission Open... */
+            background: linear-gradient(135deg, #9b59b6 0%, #e91e63 100%); /* Purple to pink gradient */
+            color: #fff; /* White text */
+        }
+        .highlight-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(213, 42, 42, 0.7);
+            cursor: default;
+        }
+
+        .description {
+            font-size: 1.3rem;
+            margin: 18px 0 40px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #2e2e5d;
+        }
+
+        .contact-container {
+            background: #fff;
+            max-width: 360px;
+            margin: 0 auto 60px;
+            padding: 25px 25px 35px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 14px;
+        }
+        .contact-info {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #212183;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); /* Light blue gradient */
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: #fff; /* White text */
+            display: inline-block;
+        }
+
+        .phone-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between number and button */
+        }
+        .phone-number {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #d42a2a;
+            letter-spacing: 2px;
+            user-select: text;
+        }
+        .phone-number span.country-code {
+            color: #d42a2a;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        .call-btn-small {
+            background-color: #d42a2a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(212, 42, 42, 0.5);
+            user-select: none;
+        }
+        .call-btn-small:hover {
+            background-color: #a21d1d;
+        }
+        .call-btn-small svg {
+            fill: #fff;
+            width: 20px;
+            height: 20px;
+        }
+
+        .boards-info {
+            font-size: 1rem;
+            color: #4a4a9f;
+            font-style: italic;
+            margin-top: 12px;
+            letter-spacing: 0.8px;
+        }
+
+        .medium-info {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2e2e5d;
+            margin-top: 18px;
+            letter-spacing: 0.8px;
+        }
+
+        .ownership {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #d42a2a;
+            margin-top: 30px;
+            font-style: italic;
+            user-select: none;
+        }
+        
+        /* Floating WhatsApp Button */
+        .floating-whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366; /* WhatsApp green */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+            user-select: none;
+        }
+        .floating-whatsapp-btn:hover {
+            background-color: #128c7e; /* Darker green on hover */
+        }
+        .floating-whatsapp-btn svg {
+            fill: #fff;
+            width: 28px;
+            height: 28px;
+        }
+
+        /* Why join section */
+        .why-join-container {
+            background: linear-gradient(135deg, #ffcc00 0%, #ff9900 50%, #d42a2a 100%); /* Yellow to orange to red gradient */
+            max-width: 600px;
+            margin: 40px auto 60px;
+            border: 4px solid #d42a2a;
+            border-radius: 20px;
+            padding: 30px 25px;
+            box-shadow: inset 0 4px 10px rgba(0,0,0,0.2), 0 8px 20px rgba(213, 42, 42, 0.4); /* Added inner shadow for depth */
+            color: #212183;
+            font-family: 'Poppins', sans-serif;
+            user-select: none;
+            text-align: left;
+        }
+        .why-join-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffd700; /* Solid gold color */
+        }
+        .why-join-container ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #212183; /* Dark blue for better contrast */
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px 10px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Dark blue gradient */
+            color: #ecf0f1; /* Light text */
+            font-size: 0.9rem;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo-text">N.P.T.<span class="c-padding">C</span></h1>
+        <div class="tagline">NEW PERFECT</div>
+    </header>
+
+    <div class="highlight-box">TUITION</div>
+
+    <div class="description">
+        Jr. KG to 12<sup>th</sup> Commerce
+    </div>
+
+    <div class="highlight-box">Admission Open...</div>
+
+    <div class="contact-container">
+        <div class="contact-info">Contact No:-</div>
+        <div class="phone-section">
+            <div class="phone-number">
+                <span class="country-code">+91</span> 96645 65889
+            </div>
+            <a href="tel:+919664565889" class="call-btn-small" aria-label="Call Now">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M6.62 10.79a15.466 15.466 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A17.92 17.92 0 013 6a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.21 1.11l-2.26 2.26z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="boards-info">(GSEB &amp; CBSE)</div>
+        <div class="medium-info">Medium: English, Hindi &amp; Gujarati</div>
+        <div class="ownership">Owned &amp; Managed by Sangram Sir</div>
+    </div>
+
+    <div class="why-join-container">
+        <h2>Why Should You Join N.P.T.C?</h2>
+        <ul>
+            <li>Experienced and dedicated faculty members.</li>
+            <li>Expert coaching for Jr. KG to 12<sup>th</sup> Commerce.</li>
+            <li>CBSE &amp; GSEB board syllabus covered comprehensively.</li>
+            <li>Individual attention for each student to ensure better understanding.</li>
+            <li>Focus on both academic excellence and overall development.</li>
+            <li>Affordable fees with excellent results in board exams.</li>
+            <li>Medium of instruction in English, Hindi, and Gujarati.</li>
+        </ul>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919664565889" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp" target="_blank">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+    </a>
+
+    <footer>
+        &copy; 2024 N.P.T.C New Perfect Tuition Classes
+    </footer>
+</body>
+</html>
